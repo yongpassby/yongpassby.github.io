@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>x = lg y</title>
+
+	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.0.min.js"></script>
+	<script type="text/javascript">
+		var op=0.15;
+
+		// function setbluropa(){document.getElementById("mykifiSVGblur").style.opacity=op;}
+		$(document).ready(function (){
+			$("#mykifiSVGblur").css("opacity",op);
+
+			$("#CLkifi").click(function() {
+				alert("CLickEvent!\nAnimateStarting;\nToBeContinued...");
+				$("#lF5lines").css("width","0");
+				$("#CLkifi").css("width","0");
+				$("#rT3lines").css("width","100%");
+				// alert("anm Done");
+			});
+
+			$("#CLkifi").mouseover(function (){
+				$("#mykifiSVGblur").css("opacity",0.98);
+				$("#mykifiSVG").css("opacity",0);
+				$(".left").addClass("lefted");
+			});
+			$("#CLkifi").mouseleave(function (){
+				$("#mykifiSVGblur").css("opacity",op);
+				$("#mykifiSVG").css("opacity","1");
+				$(".left").removeClass("lefted");
+			});
+		});
+		
+	</script>
+
+	<style type="text/css">
+		html,body {height: 100%;margin: 0;}
+		
+		.bgg {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0px;
+			top: 0px;
+		}
+
+		.outercon{overflow: hidden;}
+		
+		#a67e6a1a3be699242537ce15eec1d {opacity: 0.65;font-size: 110%;}
+		
+		.dash{z-index: 10;}
+
+		#a22d9cf3d14af485977 {
+			background: linear-gradient(to right, rgba(255, 255, 255, 0) 0.2em, rgba(255, 255, 255, 1) 0.625em, rgba(255, 255, 255, 0) 1.05em), linear-gradient(to bottom, rgba(0, 0, 0, 0) 1.2em, rgba(0, 0, 0, 1) 1.2em);
+			background-size: 1.25em 1.25em;
+		}
+		
+		#a9f469fce12d3bf91f0293eab98a531 {
+			background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0.2em, rgba(255, 255, 255, 1) 0.625em, rgba(255, 255, 255, 0) 1.05em), linear-gradient(to right, rgba(0, 0, 0, 0) 1.2em, rgba(0, 0, 0, 1) 1.2em);
+			background-size: 1.25em 1.25em;
+		}
+		
+		#df6d4867727ff4316181c1299eb4a575 {
+			z-index: 15;
+			background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 4.875em, rgba(0, 0, 0, 0.9) 4.875em), linear-gradient(to right, rgba(0, 0, 0, 0) 4.875em, rgba(0, 0, 0, 0.9) 4.875em);
+			background-size: 5em 5em;
+		}
+		
+		#graphcontain {height: 50%;width: 100%;top: 25%;position: absolute;}
+
+		.linecluster{
+			float: left;
+			height: 100%;
+		}
+		#lF5lines{width: 37%;}
+		#rT3lines{width: 0%;}
+
+		.track{
+			height: 2%;
+			/*background-color: navy;*/
+			position: relative;
+		}
+		.newline{
+			height: 100%;
+			background-color: navy;
+			position: relative;
+		}
+
+		.left {
+			float: right;
+			right: 110%;
+			width: 110%;
+			transition-timing-function: ease-out;
+		}
+		.lefted{
+			right: 0;
+			width: 0;
+		}
+
+		.right{
+			left: 0;
+			width: 100%;
+		}
+
+		.levelshift{transition: 0.5s;}
+
+		#CLkifi {
+			float: left;
+			position: relative;
+			height: 100%;
+			min-height: 1em;
+			width: 20%;
+			margin: 0 -4.5%;
+		}
+		
+		#mykifiSVG {
+			z-index: 120;
+		}
+		
+		#mykifiSVGblur {
+			z-index: 90;
+			opacity: 0;
+		}
+
+		.kifi {
+			transition: 0.25s;
+			transition-timing-function: ease-out;
+			position: absolute;
+			height: 100%;
+			width: 100%;
+		}
+		@media screen and (-webkit-min-device-pixel-ratio:0){
+			.kifi svg{
+				height: 100%;
+				width:inherit;
+			}
+		}
+	</style>
+</head>
+
+<body><!-- onload="//setbluropa()" -->
+	<div id="a67e6a1a3be699242537ce15eec1d" class="bgg outercon">
+		<div id="a22d9cf3d14af485977" class="bgg dash"></div>
+		<div id="a9f469fce12d3bf91f0293eab98a531" class="bgg dash"></div>
+		<div id="df6d4867727ff4316181c1299eb4a575" class="bgg"></div>
+		<div class="bgg" style="background-color:#F9F9F9; opacity:0.5;"></div>
+	</div>
+
+	<div id="graphcontain" class="outercon">
+		<div id="lF5lines" class="linecluster levelshift">
+			<div class="track" style="top: 9%;"><div class="left newline" style="transition:0.20s;"></div></div><!-- I -->
+			<div class="track" style="top: 27%;"><div class="left newline" style="transition:0.25s;"></div></div><!-- II -->
+			<div class="track" style="top: 45%;"><div class="left newline" style="transition:0.30s;"></div></div><!-- III -->
+			<div class="track" style="top: 62.5%;"><div class="left newline" style="transition:0.35s;"></div></div><!-- IV -->
+			<div class="track" style="top: 81%;"><div class="left newline" style="transition:0.40s;"></div></div><!-- V -->
+		</div>
+
+		<div id="CLkifi" class="levelshift"><!-- onclick="MAUS_Xlixk()" onmouseover="MAUS_in()" onmouseout="MAUS_leave()"--> 
+			<div id="mykifiSVG" class="kifi">
+				<svg  viewBox="10 0 20 50" xmlns="http://www.w3.org/2000/svg">
+					<!-- 400 and 500 are orig.scale viewBox="x, y, width, height" width="20em" height="100%"-->
+					<g stroke-width="0.75" stroke="Navy">
+						<title>L1</title>
+						<line y2="45" x2="10" y1="35" x1="30"  stroke-linejoin="undefined" stroke-linecap="undefined" fill="none" id="svg_2" ></line>
+						<line y2="15" x2="30" y1="5" x1="10"  stroke-linejoin="undefined" stroke-linecap="undefined" fill="none" id="svg_4" ></line>
+						<line y2="25" x2="30" y1="15" x1="10"  stroke-linejoin="undefined" stroke-linecap="undefined" fill="none" id="svg_5" ></line>
+						<line y2="20" x2="20" y1="10" x1="20"  stroke-linejoin="undefined" stroke-linecap="undefined" fill="none" id="svg_6" ></line>
+						<line y2="35" x2="30" y1="25" x1="10"  stroke-linejoin="undefined" stroke-linecap="undefined" fill="none" id="svg_7" ></line>
+						<line y2="35" x2="10" y1="25" x1="30"  stroke-linejoin="undefined" stroke-linecap="undefined" fill="none" id="svg_8" ></line>
+					</g>
+				</svg>
+			</div>
+			<div id="mykifiSVGblur" class="kifi">
+				<svg  viewBox="10 0 20 50" xmlns="http://www.w3.org/2000/svg">
+					<!-- 400 and 500 are orig.scale viewBox="x, y, width, height"-->
+					<defs>
+						<filter id="MoreBrThenGausBlur">
+							<feGaussianBlur in="SourceGraphic" result="blr" stdDeviation="0.95" ></feGaussianBlur>
+							<feGaussianBlur in="SourceGraphic" result="scndblr" stdDeviation="0.35" ></feGaussianBlur>
+							<feColorMatrix in="blr" result="brclradj" type="matrix"
+				                values="0.05 0 0 0 0.05
+				                        0 0.05 0 0 0.05
+				                        0 0 2 0 0.05
+				                        0 0 0 3 0
+				                "></feColorMatrix>
+							<feMerge result="mgfkglow">
+								<feMergeNode in="brclradj"></feMergeNode>
+								<feMergeNode in="scndblr"></feMergeNode>
+							</feMerge>
+			                <feBlend mode="lighten" in2="SourceGraphic" in="mgfkglow"></feBlend>
+
+						</filter>
+					</defs>
+					<g style="filter:url(#MoreBrThenGausBlur)" stroke-width="0.65" stroke="#FAFAFF">
+						<title>L1</title>
+						<line y2="45" x2="10" y1="35" x1="30"  stroke-linejoin="undefined" stroke-linecap="undefined" fill="none" id="svg_2" ></line>
+						<line y2="15" x2="30" y1="5" x1="10"  stroke-linejoin="undefined" stroke-linecap="undefined" fill="none" id="svg_4" ></line>
+						<line y2="25" x2="30" y1="15" x1="10"  stroke-linejoin="undefined" stroke-linecap="undefined" fill="none" id="svg_5" ></line>
+						<line y2="20" x2="20" y1="10" x1="20"  stroke-linejoin="undefined" stroke-linecap="undefined" fill="none" id="svg_6" ></line>
+						<line y2="35" x2="30" y1="25" x1="10"  stroke-linejoin="undefined" stroke-linecap="undefined" fill="none" id="svg_7" ></line>
+						<line y2="35" x2="10" y1="25" x1="30"  stroke-linejoin="undefined" stroke-linecap="undefined" fill="none" id="svg_8" ></line>
+					</g>
+				</svg>
+			</div>
+			<div style="clear:both;"></div>
+		</div>
+
+		<div id="rT3lines" class="linecluster levelshift"><!-- style="float:right;" -->
+			<div class="track" style="top: 29%;"><div class="right newline"></div></div>
+			<div class="track" style="top: 47%;"><div class="right newline"></div></div>
+			<div class="track" style="top: 65%;"><div class="right newline"></div></div>
+		</div>
+	</div>
+	<div id="undercons" style="position: fixed;font-size: 3em;">This Site is Under Construction</div>
+</body>
+
+</html>
