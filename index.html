@@ -109,6 +109,12 @@
 				width:inherit;
 			}
 		}
+		@-moz-document url-prefix() { 
+			.kifi svg {
+				height: 100%;
+				width:inherit;
+			}
+		}
 
 		#rxrcon{
 			position: absolute;
@@ -210,11 +216,12 @@
 	</div>
 
 	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.0.min.js"></script>
-<!-- 	<script>
+	<!-- <script src="scripts/jquery-3.1.0.min.js"></script> -->
+	<script>
         // Fallback to loading jQuery from a local path if the CDN is unavailable
-        (window.jQuery || document.write('<script src="/scripts/jquery-3.1.0.min.js"><\/script>'));
+        (window.jQuery || document.write('<script src="scripts/jquery-3.1.0.min.js"><\/script>'));
     </script>
- -->
+
 
 
 	<script type="text/javascript">
